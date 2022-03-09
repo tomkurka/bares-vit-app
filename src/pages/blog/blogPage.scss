@@ -1,0 +1,12 @@
+@import "../../styles/styles.scss";
+
+.blog-page {
+  padding-top: 80px;
+  background: $color-dark-2;
+  @include flex-center-center();
+
+  @media (max-width: 1000px) {
+    padding-top: 60px;
+    padding-bottom: 75px;
+  }
+}

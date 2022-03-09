@@ -1,0 +1,39 @@
+@import "../../../styles/styles.scss";
+.slide-input-with-question {
+  background: $color-dark-2;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  position: relative;
+  z-index: 100000;
+  .block-question {
+    height: 100%;
+    @include flex-center-center-column();
+    gap: 50px;
+    padding: 15px 30px;
+
+    .question {
+      color: $color-gold-1;
+      font-size: 3em;
+      font-weight: 800;
+      text-align: center;
+    }
+    .label {
+      color: $color-light-2;
+      text-align: center;
+    }
+  }
+  .block-input {
+    input {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      overflow: hidden;
+      outline: none;
+      border: none;
+      background: $color-dark-3;
+      font-size: 5em;
+      font-weight: 800;
+      color: $color-light-1;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+.blog-posts-container-preview {
+  max-width: 1600px;
+  width: 100%;
+  padding: 30px;
+  @media (max-width: 600px) {
+    padding: 20px;
+  }
+}

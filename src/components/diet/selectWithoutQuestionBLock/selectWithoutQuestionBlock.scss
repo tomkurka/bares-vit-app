@@ -1,0 +1,29 @@
+@import "../../../styles/styles.scss";
+
+.slide-select-without-question {
+  background: $color-dark-2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 4em;
+  font-weight: 800;
+  position: relative;
+  z-index: 100000;
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+  .option {
+    @include flex-center-center();
+    background: $color-dark-2;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      background: $color-dark-3;
+    }
+    &.select {
+      background: $color-gold-1;
+      &:hover {
+        background: $color-gold-1;
+      }
+    }
+  }
+}

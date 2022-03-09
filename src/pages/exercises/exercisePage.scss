@@ -1,0 +1,15 @@
+@import "../../styles/mixins.scss";
+.exercise-page {
+  @include flex-center-center-column();
+  gap: 45px;
+  width: 100%;
+  .youtube-container {
+    padding: 0;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+  .description {
+    text-align: justify;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,49 @@
+@import "../../../styles/styles.scss";
+
+.custom-text-round-header {
+  @include flex-center-center-column();
+  text-align: center;
+  height: 300px;
+  width: 300px;
+  border: 14px solid $color-gold-1;
+  border-radius: 50%;
+  animation-duration: 1s;
+  animation-name: logoAnimation;
+  animation-iteration-count: 2;
+  font-size: 58px;
+  &.small {
+    font-size: 48px;
+  }
+  @media (max-width: 1400px) {
+    font-size: 48px;
+    height: 250px;
+    width: 250px;
+    border: 12px solid $color-gold-1;
+    &.small {
+      font-size: 38px;
+    }
+  }
+  @media (max-width: 500px) {
+    height: 70vw;
+    width: 70vw;
+    font-size: 12vw;
+    border-size: 1vw;
+    &.small {
+      font-size: 11vw;
+    }
+  }
+}
+
+@keyframes logoAnimation {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

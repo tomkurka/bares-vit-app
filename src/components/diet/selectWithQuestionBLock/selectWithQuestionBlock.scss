@@ -1,0 +1,67 @@
+@import "../../../styles/styles.scss";
+
+.slide-select-with-question {
+  background: $color-dark-2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+  position: relative;
+  z-index: 100000;
+  .block-question {
+    height: 100%;
+    @include flex-center-center-column();
+    gap: 50px;
+    padding: 15px 30px;
+
+    .question {
+      color: $color-gold-1;
+      font-size: 3em;
+      font-weight: 800;
+      text-align: center;
+    }
+    .label {
+      text-align: center;
+      color: $color-light-2;
+    }
+  }
+  .block-options {
+    @include flex-column();
+
+    background: $color-dark-3;
+    width: 100%;
+
+    @media (max-width: 600px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .option {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      font-size: 2em;
+      padding: 15px 30px;
+      font-weight: 600;
+      cursor: pointer;
+      @media (max-width: 600px) {
+        @include flex-center-center();
+        padding: 15px;
+        font-size: 1.2em;
+        text-align: center;
+        width: 100%;
+      }
+      transition: 0.3s;
+      &:hover {
+        background: $color-dark-2;
+      }
+      &.select {
+        background: $color-gold-1;
+        &:hover {
+          background: $color-gold-1;
+        }
+      }
+    }
+  }
+}

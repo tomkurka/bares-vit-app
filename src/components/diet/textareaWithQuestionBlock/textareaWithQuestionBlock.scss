@@ -1,0 +1,41 @@
+@import "../../../styles/styles.scss";
+
+.slide-textarea-with-question {
+  background: $color-dark-2;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  position: relative;
+  z-index: 100000;
+  .block-question {
+    @include flex-center-center-column();
+    height: 100%;
+    gap: 50px;
+    padding: 15px 30px;
+    text-align: center;
+
+    .question {
+      color: $color-gold-1;
+      font-size: 3em;
+      font-weight: 800;
+    }
+    .label {
+      color: $color-light-2;
+    }
+  }
+  .block-textarea {
+    padding: 30px;
+    background: $color-dark-3;
+    textarea {
+      background: $color-dark-3;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      overflow: hidden;
+      outline: none;
+      border: none;
+      font-size: 3em;
+      font-weight: 600;
+      color: $color-light-1;
+    }
+  }
+}

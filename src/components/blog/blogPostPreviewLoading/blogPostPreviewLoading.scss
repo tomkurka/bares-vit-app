@@ -1,0 +1,70 @@
+@import "../../../styles/styles.scss";
+.blog-post-preview-loading-animation {
+  transition: transform 0.3s;
+  background: $color-dark-4;
+  font-size: $font-size-s;
+  overflow: hidden;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  .preview-img-container {
+    @include flex-center-center-column();
+    height: 250px;
+    width: 100%;
+    background: gold;
+    color: transparent;
+
+    @media (max-width: 1400px) {
+      height: 200px;
+    }
+    @media (max-width: 600px) {
+      height: 250px;
+    }
+    @media (max-width: 400px) {
+      height: 200px;
+    }
+  }
+
+  .content-container {
+    @include flex-center-flexStart-column();
+    padding: 20px;
+    gap: 15px;
+
+    @media (max-width: 1400px) {
+      font-size: $font-size-xs;
+    }
+    @media (max-width: 600px) {
+      font-size: $font-size-s;
+    }
+    @media (max-width: 420px) {
+      font-size: $font-size-xs;
+    }
+    .name {
+      font-size: 1.5em;
+      font-weight: 600;
+      background: gold;
+      color: transparent;
+    }
+    .auth-date {
+      color: $color-light-2;
+      background: gold;
+      color: transparent;
+    }
+    .tags {
+      width: 100%;
+      @include flex-flexStart-center();
+      gap: 0.8em;
+      flex-wrap: wrap;
+      .tag {
+        background: gold;
+        color: transparent;
+        font-weight: 600;
+        padding: 0.3em 0.8em;
+        font-size: 0.9em;
+      }
+    }
+  }
+}

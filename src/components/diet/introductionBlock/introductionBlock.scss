@@ -1,0 +1,37 @@
+@import "../../../styles/styles.scss";
+
+.slide-introduction {
+  @include flex-center-center-column();
+  gap: 50px;
+  padding: 25px;
+  text-align: center;
+  position: relative;
+  z-index: 5;
+  padding-top: 80px;
+  @media (max-width: 1000px) {
+    padding-top: 60px;
+    gap: 30px;
+    padding-bottom: 75px;
+  }
+  .arrow-down {
+    width: 100px;
+    bottom: 20px;
+    z-index: -1;
+    fill: $color-gold-1;
+  }
+  h3 {
+    font-size: $font-size-xl;
+    margin: 0;
+    @media (max-width: 600px) {
+      font-size: $font-size-m;
+    }
+  }
+  p {
+    margin: 0;
+    font-size: $font-size-m;
+    color: $color-light-2;
+    @media (max-width: 600px) {
+      font-size: $font-size-s;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import "./colors.scss";
+
+@mixin sidePattern {
+  &::after {
+    content: "Health - Love - Grind  - Discover - Enjoy - Focus";
+    position: absolute;
+    bottom: calc(48%);
+    right: -180px;
+
+    letter-spacing: 1px;
+    transform: rotate(-90deg);
+    font-weight: 600;
+    color: $color-dark-2;
+    z-index: 5000;
+    @media (max-width: 800px) {
+      display: none;
+    }
+  }
+}
